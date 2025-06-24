@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0,user-scalable=no"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
     <title>MegaWin77 – Download on Google Play</title>
 
@@ -21,120 +21,104 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Facebook Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
+    <script src="https://websdk.appsflyer.com/af-sdk.min.js"></script>
 
+    <script>
       function getUrlParam(name) {
         const params = new URLSearchParams(window.location.search);
         return params.get(name) || "";
       }
 
-      const pixelid = getUrlParam("pixelid") || "947256216730831";
-      const campaign = getUrlParam("utm_campaign");
-      const adId = getUrlParam("utm_ad");
-      const adName = getUrlParam("utm_content");
-      const fbclid = getUrlParam("fbclid");
-
-      fbq("init", pixelid);
-      fbq("track", "PageView", {
-        campaign: campaign,
-        ad: adId,
-        name: adName,
-        fbclid: fbclid,
-      });
-    </script>
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=947256216730831&ev=PageView&noscript=1"
-      />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
-
-    <!-- AppsFlyer Web SDK -->
-    <script src="https://websdk.appsflyer.com/af-sdk.min.js"></script>
-    <script>
-      // 初始化 AppsFlyer SDK
-      window.addEventListener("DOMContentLoaded", function () {
-        const appsFlyerDevKey = "8CArApegmJKkJhHBZD5QE";
-        const appId = "kasino.game.bet77";
-
-        const afParams = {
-          devKey: appsFlyerDevKey,
-          appId: appId,
-          onConversionDataSuccess: function (data) {
-            console.log("AppsFlyer Conversion Data:", data);
-          },
-          onConversionDataFail: function (err) {
-            console.error("AppsFlyer Conversion Data error:", err);
-          },
-        };
-
-        if (window.AppsFlyer) {
-          AppsFlyer.initSdk(afParams);
-        }
-      });
-    </script>
-
-    <script>
-      // 动态拼接下载链接，支持多渠道参数传递
       function getDownloadUrl() {
         const campaign = getUrlParam("utm_campaign");
         const adId = getUrlParam("utm_ad");
         const adName = getUrlParam("utm_content");
         const fbclid = getUrlParam("fbclid");
         const pixelid = getUrlParam("pixelid") || "947256216730831";
+        const ua = navigator.userAgent;
+        const fbsub4 =
+          "fb." + Date.now() + "." + Math.floor(Math.random() * 9999999);
 
-        // 拼接APK下载链接，传递关键归因参数
         return (
           `https://res.77in.me/77.Bet.apk?pid=facebook` +
           `&campaign=${encodeURIComponent(campaign)}` +
           `&af_sub1=${encodeURIComponent(adId)}` +
           `&af_sub2=${encodeURIComponent(pixelid)}` +
           `&af_sub3=${encodeURIComponent(adName)}` +
+          `&af_sub4=${encodeURIComponent(fbsub4)}` +
+          `&af_sub5=${encodeURIComponent(ua)}` +
+          `&af_js_web=true` +
           `&fbclid=${encodeURIComponent(fbclid)}`
         );
       }
 
-      // 点击安装按钮，先触发Facebook Lead事件，再跳转下载链接
       window.addEventListener("DOMContentLoaded", () => {
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js"
+        );
+
+        const pixelid = getUrlParam("pixelid") || "947256216730831";
+        const campaign = getUrlParam("utm_campaign");
+        const adId = getUrlParam("utm_ad");
+        const adName = getUrlParam("utm_content");
+        const fbclid = getUrlParam("fbclid");
+
+        fbq("init", pixelid);
+        fbq("track", "PageView", {
+          campaign: campaign,
+          ad: adId,
+          name: adName,
+          fbclid: fbclid,
+        });
+
+        const appsFlyerDevKey = "8CArApegmJKkJhHBZD5QE";
+        const appId = "kasino.game.bet77";
+
+        if (window.AppsFlyer) {
+          AppsFlyer.initSdk({
+            devKey: appsFlyerDevKey,
+            appId: appId,
+            onConversionDataSuccess: function (data) {
+              console.log("AppsFlyer Conversion Data:", data);
+            },
+            onConversionDataFail: function (err) {
+              console.error("AppsFlyer Conversion Data error:", err);
+            },
+          });
+        }
+
         const btn = document.querySelector(".btn-success");
         if (btn) {
           btn.addEventListener("click", () => {
             fbq("track", "Lead", {
-              campaign: getUrlParam("utm_campaign"),
-              ad: getUrlParam("utm_ad"),
-              name: getUrlParam("utm_content"),
-              fbclid: getUrlParam("fbclid"),
+              campaign: campaign,
+              ad: adId,
+              name: adName,
+              fbclid: fbclid,
             });
             setTimeout(() => {
               window.location.href = getDownloadUrl();
-            }, 300);
+            }, 800);
           });
         }
       });
@@ -145,7 +129,7 @@
     <header>
       <nav>
         <a class="navbar-left" href="#">
-          <img src="images/logo.png" />
+          <img src="images/logo.png" alt="Logo" />
         </a>
         <ul class="nav">
           <li><a href="#">Game</a></li>
@@ -200,7 +184,7 @@
         <div class="container">
           <div class="text">
             <div class="main_top">
-              <div class="left"><img src="images/77.png" /></div>
+              <div class="left"><img src="images/77.png" alt="77" /></div>
               <div class="main_text">
                 <h1>MegaWin77</h1>
                 <div class="s_text">
@@ -210,7 +194,7 @@
               </div>
             </div>
             <div class="detail">
-              <div class="dd"><img src="images/77.png" /></div>
+              <div class="dd"><img src="images/77.png" alt="77" /></div>
               <div class="dd">
                 <strong>4.8<span class="iconfont icon-xingxing"></span></strong>
                 <p>139K reviews</p>
