@@ -1,90 +1,870 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>77Bet Download</title>
-  <meta property="og:title" content="77Bet - Get Your Bonus Now" />
-  <meta property="og:description" content="Claim your exclusive bonus and start winning!" />
-  <meta property="og:image" content="icon.png" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #120000;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    .btn {
-      background: #ffc107;
-      border: none;
-      padding: 1em 2em;
-      border-radius: 30px;
-      font-size: 1.2em;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background: #e0a800;
-    }
-  </style>
-</head>
-<body>
-  <h1>🎁 Welcome to 77Bet</h1>
-  <p>Click the button below to claim your bonus and start playing.</p>
-  <button class="btn" onclick="startDownload()">Download Now</button>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=no"
+    />
+    <title>MegaWin77 – Download on Google Play</title>
 
-  <script>
-    function getParam(name) {
-      const url = new URL(window.location.href);
-      return url.searchParams.get(name) || '';
-    }
+    <link
+      rel="icon"
+      href="images/favicon_v3.ico"
+      type="image/x-icon"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "947256216730831");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=947256216730831&ev=PageView&noscript=1"
+      />
+    </noscript>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="navbar-left" href="#">
+          <img src="images/logo.png" />
+        </a>
+        <ul class="nav">
+          <li><a href="#">Game</a></li>
+          <li class="active"><a href="#">Apps</a></li>
+          <li><a href="#">Movies & TV</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Kids</a></li>
+        </ul>
+        <div class="navbar-right rows">
+          <a href="#"><span class="iconfont icon-sousuo"></span> </a>
+          <a href="#"><span class="iconfont icon-bangzhu"></span> </a>
+          <a href="#"><span class="iconfont icon-user"></span> </a>
+        </div>
+      </nav>
+    </header>
+    <section class="main_bg">
+      <div class="container">
+        <div class="video">
+          <video width="100%" controls autoplay muted loop>
+            <source src="images/movie.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video_bg"></div>
+          <script>
+            window.onload = function () {
+              var video = document.getElementById("myVideo");
+              video.loop = true; // 设置视频循环播放
+              video.play(); // 自动播放视频
+            };
+          </script>
+        </div>
+      </div>
+      <div class="main_info">
+        <div class="container">
+          <div class="text">
+            <div class="main_top">
+              <div class="left"><img src="images/77.png" /></div>
+              <div class="main_text">
+                <h1>MegaWin77</h1>
+                <div class="s_text">
+                  <a href="#">MAGAWIN77 US, LLC</a>
+                  <p>In-app purchases</p>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="dd"><img src="images/77.png" /></div>
+              <div class="dd">
+                <strong
+                  >4.8<span class="iconfont icon-xingxing"></span>
+                </strong>
+                <p>139K reviews</p>
+              </div>
+              <div class="dd">
+                <strong>5M+</strong>
+                <p>Download</p>
+              </div>
+              <div class="dd">
+                <strong><b>18+</b></strong>
+                <p>
+                  18+ Restricted <a class="iconfont icon-zhushi" href="#"></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="down_bar">
+            <a class="btn btn-success" id="download-button" href="#">Install</a>
 
-    function startDownload() {
-      const campaign = getParam('utm_campaign');
-      const ad = getParam('utm_ad');
-      const content = getParam('utm_content');
-      const fbclid = getParam('fbclid');
-      const pixelid = getParam('pixelid') || '947256216730831'; // 默认 Pixel ID
+            <a href="https://res.77in.me/77.Bet.apk"
+              ><span class="iconfont icon-fenxiang"></span> share</a
+            >
+            <a href="https://res.77in.me/77.Bet.apk"
+              ><span class="iconfont icon-shoucang"></span> Add to wishlist</a
+            >
+            <button class="btn btn-play right" id="playVideo">
+              <span class="iconfont icon-paly"></span>Trailer
+            </button>
+            <div class="back_bg cent" id="v_bg">
+              <video id="videoPlayer" controls>
+                <source src="images/movie.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <!--<div class="mt20">-->
+          <!--<p><span class="iconfont icon-diannaoshouji"></span> This app is available for your device</p>-->
+          <!--</div>-->
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 pr60">
+          <!--滚动图片-->
+          <div class="img_gund">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/p1.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p2.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p3.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p4.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p5.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p1.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p2.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p3.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p4.jpeg" /></div>
+                <div class="swiper-slide"><img src="images/p5.jpeg" /></div>
+              </div>
+            </div>
+            <!--<div class="swiper-button-next"></div>-->
+            <!--<div class="swiper-button-prev"></div>-->
+          </div>
+          <!-- Swiper JS -->
+          <script src="js/swiper-bundle.min.js"></script>
+          <!-- Initialize Swiper -->
 
-      // 拼接 APK 下载链接，带上参数
-      const downloadUrl = `https://res.77in.me/77.Bet.apk?pid=facebook&campaign=${encodeURIComponent(campaign)}&af_sub1=${encodeURIComponent(ad)}&af_sub2=${encodeURIComponent(pixelid)}&af_sub3=${encodeURIComponent(content)}&fbclid=${encodeURIComponent(fbclid)}`;
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 2.5,
+              breakpoints: {
+                440: {
+                  slidesPerView: 2.5,
+                },
+                620: {
+                  slidesPerView: 3.5,
+                },
+                1024: {
+                  slidesPerView: 4.5,
+                },
+              },
+              spaceBetween: 16,
+              freeMode: true,
+              autoplay: true,
+              // navigation: {
+              //     nextEl: '.swiper-button-next',
+              //     prevEl: '.swiper-button-prev',
+              // },
+            });
+          </script>
+          <!--滚动图片end-->
+          <div class="mt20 article">
+            <h2 class="tit">
+              About this game<a href="#" class="more"
+                ><span class="iconfont icon-xiangyoujiantou"></span>
+              </a>
+            </h2>
+            <p>
+              <b
+                >Welcome to MegaWin77 – India’s Trusted Real Money Gaming
+                Platform</b
+              ><br />Play rummy, casino, slots, fantasy sports & more — all in
+              one exciting app built for real winners!
+            </p>
+            <p>
+              <b>Get Started with RS 7,777 Welcome Bonus</b><br />Enjoy RS 200
+              daily free spins and up to RS 5,000 bonus on your first deposit.
+            </p>
+            <p>
+              <b>Daily Tournaments & Leaderboards</b><br />Compete with players
+              across India in real-time events and win real rewards!
+            </p>
+            <p>
+              <b>Fast, Secure Withdrawals</b><br />Instant payouts via UPI,
+              PayTM & NetBanking with encrypted processing.
+            </p>
+            <p>
+              <b>24/7 Support & Responsible Gaming</b><br />We’re here anytime
+              you need. Licensed platform, strictly for age 18+.
+            </p>
+            <p>
+              <b>Install now to claim your bonus and start winning today!</b>
+            </p>
+            <p>
+              <strong>Last updated:</strong><br />
+              27 May 2025
+            </p>
+            <p>
+              This information was provided by the developer and may be updated
+              over time.
+            </p>
+            <div class="tag">
+              <a href="#">Aviator</a>
+              <a href="#">Live Casino</a>
+              <a href="#">Slot</a>
+              <a href="#">Card Gamesr</a>
+              <a href="#">Sports</a>
+              <a href="#">Fishing</a>
+              <a href="#">Multi-player</a>
+            </div>
+          </div>
+          <div class="mt20 article">
+            <h2 class="tit">
+              Data safety<a href="#" class="more"
+                ><span class="iconfont icon-xiangyoujiantou"></span>
+              </a>
+            </h2>
+            <p>
+              At MegaWin77, your security and privacy matter. The developer has
+              provided the following information about how this app collects,
+              shares, and protects your data:
+            </p>
 
-      // 动态加载 Facebook Pixel 脚本并触发事件
-      if (pixelid) {
-        !function(f,b,e,v,n,t,s){
-          if(f.fbq) return;
-          n=f.fbq=function(){n.callMethod ?
-          n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
-          if(!f._fbq) f._fbq=n;
-          n.push=n;
-          n.loaded=!0;
-          n.version='2.0';
-          n.queue=[];
-          t=b.createElement(e);
-          t.async=!0;
-          t.src=v;
-          s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)
-        }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <span class="iconfont icon-fenxiangxiao"></span>
+                <p>
+                  <b>Data is not shared with third parties</b><br />
+                  This app does not share user data with other companies or
+                  organizations.
+                </p>
+              </div>
+              <div class="panel-body">
+                <span class="iconfont icon-shangchuan"></span>
+                <p>
+                  <b>No data is collected</b><br />
+                  The developer states that this app does not collect any user
+                  data.
+                </p>
+              </div>
+              <div class="panel-body">
+                <span class="iconfont icon-ai242"></span>
+                <p>
+                  <b>Data is encrypted in transit</b><br />
+                  All information transmitted through the app is protected using
+                  encryption protocols.
+                </p>
+              </div>
+              <div class="panel-body">
+                <span class="iconfont icon-shanchu"></span>
+                <p>
+                  <b>You can request deletion of data</b><br />
+                  Users have the option to request the deletion of their data at
+                  any time.
+                </p>
+              </div>
+              <a href="#" class="green">See details</a>
+            </div>
+          </div>
 
-        fbq('init', pixelid);
-        fbq('track', 'PageView');
-        fbq('track', 'Lead');
-      }
+          <div class="mt20 article">
+            <h2 class="tit">
+              Ratings and reviews<a href="#" class="more"
+                ><span class="iconfont icon-xiangyoujiantou"></span>
+              </a>
+              <a class="right" href="#"
+                >Ratings and reviews are verified
+                <span class="iconfont icon-zhushi"></span
+              ></a>
+            </h2>
+            <div>
+              <!-- Nav tabs -->
+              <ul class="tag score_tag" role="tablist">
+                <li role="presentation" class="active">
+                  <a
+                    href="#home"
+                    aria-controls="home"
+                    role="tab"
+                    data-toggle="tab"
+                  >
+                    <span class="iconfont icon-Phoneshouji"></span>Phone</a
+                  >
+                </li>
+                <li role="presentation">
+                  <a
+                    href="#profile"
+                    aria-controls="profile"
+                    role="tab"
+                    data-toggle="tab"
+                  >
+                    <span class="iconfont icon-v4-bijibendiannao"></span>
+                    Chromebook</a
+                  >
+                </li>
+                <li role="presentation">
+                  <a
+                    href="#messages"
+                    aria-controls="messages"
+                    role="tab"
+                    data-toggle="tab"
+                  >
+                    <span class="iconfont icon-pingbandiannao"></span>Tablet</a
+                  >
+                </li>
+              </ul>
 
-      // 延时跳转，保证 Pixel 事件能发送出去
-      setTimeout(() => {
-        window.location.href = downloadUrl;
-      }, 300);
-    }
-  </script>
-</body>
+              <!-- Tab panes -->
+              <div class="tab-content score_detail">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                  <div class="left">
+                    <div class="score">4.9</div>
+                    <div class="star">
+                      <div class="star_box" style="width: 90%">
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                      </div>
+                    </div>
+                    <p>911 reviews</p>
+                  </div>
+                  <div class="right">
+                    <ol>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 90%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 50%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 30%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 10%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 5%"></span>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                  <div class="left">
+                    <div class="score">4.8</div>
+                    <div class="star">
+                      <div class="star_box" style="width: 96%">
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                      </div>
+                    </div>
+                    <p>911 reviews</p>
+                  </div>
+                  <div class="right">
+                    <ol>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 80%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 16%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 54%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 12%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 26%"></span>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                  <div class="left">
+                    <div class="score">4.6</div>
+                    <div class="star">
+                      <div class="star_box" style="width: 92%">
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                        <span class="iconfont icon-xingxing"></span>
+                      </div>
+                    </div>
+                    <p>911 reviews</p>
+                  </div>
+                  <div class="right">
+                    <ol>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 95%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 18%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 30%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 40%"></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="bg-gray">
+                          <span class="score_bg" style="width: 5%"></span>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--评论-->
+          <div class="mt20 comment">
+            <div class="comment_list">
+              <div class="comment_user between">
+                <div class="name">
+                  <img src="images/user01.webp" />Rahul Verma
+                </div>
+                <a href="#" class="more"
+                  ><span class="iconfont icon-sandian"></span>
+                </a>
+              </div>
+              <div class="time">
+                <div class="star_bg">
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                </div>
+                30 May, 2025
+              </div>
+              <div class="detail">
+                Absolutely amazing. The rewards are real, the wins are fast, and
+                the game is super addictive! I’ve been playing for hours and
+                already cashed out twice.
+              </div>
+              <p>
+                Did you find this helpful?
+                <span class="tag">
+                  <a href="#">Yes</a>
+                  <a href="#">No</a>
+                </span>
+              </p>
+              <!--<div class="reply">-->
+              <!--<div class="reply_top"><span class="left">Megawin77 US, LLC </span> <span class="right">08 May 2025</span></div>-->
+              <!--<p>Hello Michael Johnson, we understand how frustrating it is to lose chips, especially on higher bets. While our RNG ensures fair outcomes, we know dry streaks can be discouraging. We’ve noted your concerns about payout balance and support response. Please feel free to contact us again if you’d like further help. The MGM Slots Live Team</p>-->
+              <!--</div>-->
+            </div>
+            <div class="comment_list">
+              <div class="comment_user between">
+                <div class="name">
+                  <img src="images/user02.webp" /> Priya Reddy
+                </div>
+                <a href="#" class="more"
+                  ><span class="iconfont icon-sandian"></span>
+                </a>
+              </div>
+              <div class="time">
+                <div class="star_bg">
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                </div>
+                19 Apr, 2025
+              </div>
+              <div class="detail">
+                It feels like a real casino! The graphics are crisp, and the
+                payouts are huge. I can’t stop playing. Definitely recommend if
+                you love slots or Aviator games.
+              </div>
+              <p>
+                Did you find this helpful?
+                <span class="tag">
+                  <a href="#">Yes</a>
+                  <a href="#">No</a>
+                </span>
+              </p>
+            </div>
+            <div class="comment_list">
+              <div class="comment_user between">
+                <div class="name">
+                  <img src="images/user03.webp" /> Vikram Iyer
+                </div>
+                <a href="#" class="more"
+                  ><span class="iconfont icon-sandian"></span>
+                </a>
+              </div>
+              <div class="time">
+                <div class="star_bg">
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                  <span class="iconfont icon-xingxing green"></span>
+                </div>
+                04 May, 2025
+              </div>
+              <div class="detail">
+                Best game ever! Easy to play, exciting spins, and BIG wins. I’ve
+                hit jackpots twice this week already!
+              </div>
+              <p>
+                Did you find this helpful?
+                <span class="tag">
+                  <a href="#">Yes</a>
+                  <a href="#">No</a>
+                </span>
+              </p>
+            </div>
+            <a href="#" class="btn_green">See all reviews</a>
+          </div>
+          <div class="mt20">
+            <h2 class="tit">What's new</h2>
+            <p class="mt10">
+              New features added! Enjoy smoother gameplay, faster withdrawals,
+              and exciting daily rewards.
+            </p>
+            <p class="mt10">
+              Download now and start winning with real players across India!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="sup_cont">
+            <h2 class="tit">
+              App support
+              <a href="#" class="more"
+                ><span class="iconfont icon-down"></span>
+              </a>
+            </h2>
+            <div class="sup">
+              <a href="#"
+                ><span class="iconfont icon-shixindiqiu"></span>
+                <b>Website </b></a
+              >
+              <a href="#"
+                ><span class="iconfont icon-youjian"></span> <b>Support email</b
+                ><br />community@popslotscasino.com</a
+              >
+              <a href="#"
+                ><span class="iconfont icon-baohu"></span>
+                <b>Privacy Policy </b></a
+              >
+              <p class="mt10"><b>About the developer</b></p>
+              <p class="mt10">
+                Play MAGAWIN77 US, LLC<br />
+                support@playstudios.com<br />
+                10150 Covington Cross Dr<br />
+                Las Vegas, NV 89144-6567<br />
+                United States<br />
+                +1 702-786-6611
+              </p>
+            </div>
+          </div>
+          <div class="mt20">
+            <h2 class="tit">
+              More by WEGAWIN77 US, LLC<a href="#" class="more"
+                ><span class="iconfont icon-xiangyoujiantou"></span>
+              </a>
+            </h2>
+            <ul class="app_list">
+              <li>
+                <a href="#">
+                  <img src="images/app_01.webp" />
+                  <p>POP! Slots™m Vegas Casino Games</p>
+                  <p>PLAYSTUDIOS US, LLC</p>
+                  <p>4.7 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_02.webp" />
+                  <p>Huuuge Casino Games</p>
+                  <p>Huuuge Games - Play Together</p>
+                  <p>4.3 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_03.png" />
+                  <p>Fun of Vegas - Casino slots</p>
+                  <p>TREASURETECH CO PTE. LTD.</p>
+                  <p>4.2 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_04.webp" />
+                  <p>JILI CAISHEN</p>
+                  <p>YDK LL</p>
+                  <p>4.5<span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_05.png" />
+                  <p>Jackpot island -Slots Machine</p>
+                  <p>Megata Ltd.</p>
+                  <p>4.4 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_06.webp" />
+                  <p>Lucky Time Slols:Las Vegas Casino Slot Machine</p>
+                  <p>7DGN Games</p>
+                  <p>4.8<span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mt20">
+            <h2 class="tit">
+              Similar app<a href="#" class="more"
+                ><span class="iconfont icon-xiangyoujiantou"></span>
+              </a>
+            </h2>
+            <ul class="app_list">
+              <li>
+                <a href="#">
+                  <img src="images/app_07.png" />
+                  <p>Rock N' Cash Vegas Slot Casino</p>
+                  <p>PLAYLINKS Corp</p>
+                  <p>4.6 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_08.png" />
+                  <p>Jackpot Magic - Casino Slots</p>
+                  <p>Big Fish Games</p>
+                  <p>4.4 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_09.png" />
+                  <p>777 Real Vegas Casino Slots</p>
+                  <p>HNC Games Inc.HNC Games Inc.</p>
+                  <p>4.1 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_10.png" />
+                  <p>Jackpot Madness Slots Casino</p>
+                  <p>Bagelcode: Social Casino & Slot Machine Ga</p>
+                  <p>4.3<span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_11.png" />
+                  <p>Old Vegas Slots - Casino 777</p>
+                  <p>DGN Games</p>
+                  <p>4.4<span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/app_12.png" />
+                  <p>Slot Mate - Vegas Slot Casino</p>
+                  <p>PLAYLINKS Corp.</p>
+                  <p>4.4 <span class="iconfont icon-xingxing"></span></p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flag mt20">
+        <a href="#"
+          ><span class="iconfont icon-line-flagqizhi-01"></span>
+          <b>Flag as inappropriate</b>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="foot_nav row">
+          <div class="col-md-4 col-xs-6">
+            <a href="javascript:void(0)"><b>Google Play</b></a>
+            <a href="#">About Us</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Responsible Gaming</a>
+            <a href="#"> AML / KYC Compliance</a>
+            <a href="#">Refund & Dispute Policy</a>
+          </div>
+          <div class="col-md-8 col-xs-6">
+            <a href="javascript:void(0)"><b>Player Support</b></a>
+            <a href="#"> How to Deposit & Withdraw</a>
+            <a href="#"> Bonus Terms & Eligibility</a>
+            <a href="#">Fair Play & Anti-Fraud Policy</a>
+            <a href="#">Self-Exclusion Program</a>
+            <a href="#">Help Center</a>
+            <a href="#"> Report a Problem</a>
+          </div>
+        </div>
+
+        <div class="foot_bot">
+          <div><p>© 2025 MegaWin77 – All Rights Reserved</p></div>
+          <div c class="row">
+            <div class="col-md-8">
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#"> Responsible Gaming</a>
+              <a href="#">Fair Play Commitment</a>
+              <a href="#">Promotions</a>
+              <a href="#">Help & Support</a>
+            </div>
+            <div class="col-md-4">
+              Language:
+              <a href="#"
+                ><img src="images/india.png" class="hongkong" /> India</a
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          This site is operated under applicable Indian laws. All deposits and
+          withdrawals are subject to regulatory compliance.
+        </div>
+        <div>
+          Amounts shown include all applicable charges as per governing laws.
+        </div>
+        <div>
+          Licensed for users 18 years and above. Please play responsibly.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(".sup_cont .iconfont").on("click", function () {
+        $(this).toggleClass("icon-up");
+        $(this).toggleClass("icon-down");
+        $(".sup").toggle();
+      });
+      // 视频播放
+      $(".back_bg").hide();
+      var video = $("#videoPlayer")[0];
+      $("#playVideo").click(function (event) {
+        $(".back_bg").show();
+        event.preventDefault();
+        if (video.paused) {
+          video.play().catch(function (error) {
+            console.error("播放视频时出错:", error);
+          });
+        } else {
+          video.pause();
+        }
+      });
+      $(document).on("click", "#videoPlayer", function (event) {
+        event.stopPropagation(); // 阻止事件冒泡
+      });
+      $(document).on("click", "#v_bg", function () {
+        $(".back_bg").hide();
+        video.pause();
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const downloadBtn = document.getElementById("download-button");
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // 提取参数
+        const bnp = urlParams.get("bnp") || "default";
+        const utm_campaign =
+          urlParams.get("utm_campaign") || "default_campaign";
+        const utm_ad = urlParams.get("utm_ad") || "default_ad";
+        const pixelid = "1040442857652902";
+
+        // 拼接最终跳转链接
+        const finalURL = `https://77-link.ihchaqiv.com?bnp=${bnp}&utm_campaign=${utm_campaign}&utm_ad=${utm_ad}&pixelid=${pixelid}`;
+        downloadBtn.href = finalURL;
+
+        // Facebook Pixel 自定义事件：点击下载按钮
+        if (typeof fbq !== "undefined") {
+          downloadBtn.addEventListener("click", function () {
+            fbq("trackCustom", "DownloadClicked", {
+              bnp: bnp,
+              utm_campaign: utm_campaign,
+              utm_ad: utm_ad,
+            });
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
