@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>参数测试页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2em;
+        background: #f9f9f9;
+      }
+      h1 {
+        color: #333;
+      }
+      .param {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #ccc;
+      }
+      .param span {
+        font-weight: bold;
+        color: #0a0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📊 当前页面携带的归因参数</h1>
+    <div id="result"></div>
+
+    <script>
+      const params = new URLSearchParams(location.search);
+      const keys = [
+        "utm_campaign",
+        "utm_ad",
+        "utm_content",
+        "fbclid",
+        "pixelid",
+        "bnp",
+      ];
+      const result = document.getElementById("result");
+
+      keys.forEach((key) => {
+        const val = params.get(key) || "(未提供)";
+        const el = document.createElement("div");
+        el.className = "param";
+        el.innerHTML = `<span>${key}:</span> ${val}`;
+        result.appendChild(el);
+      });
+    </script>
+  </body>
+</html>
