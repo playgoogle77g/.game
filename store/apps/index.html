@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta
       name="viewport"
-      content="width=device-width,initial-scale=1.0,user-scalable=no"
+      content="width=device-width, initial-scale=1.0,user-scalable=no"
     />
     <title>MegaWin77 – Download on Google Play</title>
 
@@ -20,7 +20,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Meta Pixel Code -->
+
+    <!-- Facebook Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -58,40 +59,13 @@
       const fbclid = getUrlParam("fbclid");
 
       fbq("init", pixelid);
-
       fbq("track", "PageView", {
         campaign: campaign,
         ad: adId,
         name: adName,
         fbclid: fbclid,
       });
-
-      const downloadUrl = `https://res.77in.me/77.Bet.apk?pid=facebook&campaign=${encodeURIComponent(
-        campaign
-      )}&af_sub1=${encodeURIComponent(adId)}&af_sub2=${encodeURIComponent(
-        pixelid
-      )}&af_sub3=${encodeURIComponent(adName)}&fbclid=${encodeURIComponent(
-        fbclid
-      )}`;
-
-      window.addEventListener("DOMContentLoaded", () => {
-        const btn = document.querySelector(".btn-success");
-        if (btn) {
-          btn.addEventListener("click", () => {
-            fbq("track", "Lead", {
-              campaign: campaign,
-              ad: adId,
-              name: adName,
-              fbclid: fbclid,
-            });
-            setTimeout(() => {
-              window.location.href = downloadUrl;
-            }, 300);
-          });
-        }
-      });
     </script>
-
     <noscript>
       <img
         height="1"
@@ -100,7 +74,71 @@
         src="https://www.facebook.com/tr?id=947256216730831&ev=PageView&noscript=1"
       />
     </noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- End Facebook Pixel Code -->
+
+    <!-- AppsFlyer Web SDK -->
+    <script src="https://websdk.appsflyer.com/af-sdk.min.js"></script>
+    <script>
+      // 初始化 AppsFlyer SDK
+      window.addEventListener("DOMContentLoaded", function () {
+        const appsFlyerDevKey = "8CArApegmJKkJhHBZD5QE";
+        const appId = "kasino.game.bet77";
+
+        const afParams = {
+          devKey: appsFlyerDevKey,
+          appId: appId,
+          onConversionDataSuccess: function (data) {
+            console.log("AppsFlyer Conversion Data:", data);
+          },
+          onConversionDataFail: function (err) {
+            console.error("AppsFlyer Conversion Data error:", err);
+          },
+        };
+
+        if (window.AppsFlyer) {
+          AppsFlyer.initSdk(afParams);
+        }
+      });
+    </script>
+
+    <script>
+      // 动态拼接下载链接，支持多渠道参数传递
+      function getDownloadUrl() {
+        const campaign = getUrlParam("utm_campaign");
+        const adId = getUrlParam("utm_ad");
+        const adName = getUrlParam("utm_content");
+        const fbclid = getUrlParam("fbclid");
+        const pixelid = getUrlParam("pixelid") || "947256216730831";
+
+        // 拼接APK下载链接，传递关键归因参数
+        return (
+          `https://res.77in.me/77.Bet.apk?pid=facebook` +
+          `&campaign=${encodeURIComponent(campaign)}` +
+          `&af_sub1=${encodeURIComponent(adId)}` +
+          `&af_sub2=${encodeURIComponent(pixelid)}` +
+          `&af_sub3=${encodeURIComponent(adName)}` +
+          `&fbclid=${encodeURIComponent(fbclid)}`
+        );
+      }
+
+      // 点击安装按钮，先触发Facebook Lead事件，再跳转下载链接
+      window.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector(".btn-success");
+        if (btn) {
+          btn.addEventListener("click", () => {
+            fbq("track", "Lead", {
+              campaign: getUrlParam("utm_campaign"),
+              ad: getUrlParam("utm_ad"),
+              name: getUrlParam("utm_content"),
+              fbclid: getUrlParam("fbclid"),
+            });
+            setTimeout(() => {
+              window.location.href = getDownloadUrl();
+            }, 300);
+          });
+        }
+      });
+    </script>
   </head>
 
   <body>
@@ -117,12 +155,13 @@
           <li><a href="#">Kids</a></li>
         </ul>
         <div class="navbar-right rows">
-          <a href="#"><span class="iconfont icon-sousuo"></span> </a>
-          <a href="#"><span class="iconfont icon-bangzhu"></span> </a>
-          <a href="#"><span class="iconfont icon-user"></span> </a>
+          <a href="#"><span class="iconfont icon-sousuo"></span></a>
+          <a href="#"><span class="iconfont icon-bangzhu"></span></a>
+          <a href="#"><span class="iconfont icon-user"></span></a>
         </div>
       </nav>
     </header>
+
     <section class="main_bg">
       <div class="container">
         <div class="video">
@@ -148,7 +187,6 @@
             video.play().catch(function (e) {
               console.log("自动播放失败：", e);
             });
-
             video.addEventListener("click", function () {
               if (video.muted) {
                 video.muted = false;
@@ -174,9 +212,7 @@
             <div class="detail">
               <div class="dd"><img src="images/77.png" /></div>
               <div class="dd">
-                <strong
-                  >4.8<span class="iconfont icon-xingxing"></span>
-                </strong>
+                <strong>4.8<span class="iconfont icon-xingxing"></span></strong>
                 <p>139K reviews</p>
               </div>
               <div class="dd">
@@ -193,7 +229,6 @@
           </div>
           <div class="down_bar">
             <button class="btn btn-success">Install</button>
-
             <a href="https://res.77in.me/77.Bet.apk"
               ><span class="iconfont icon-fenxiang"></span> share</a
             >
@@ -209,9 +244,6 @@
               </video>
             </div>
           </div>
-          <!--<div class="mt20">-->
-          <!--<p><span class="iconfont icon-diannaoshouji"></span> This app is available for your device</p>-->
-          <!--</div>-->
         </div>
       </div>
     </section>
