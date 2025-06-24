@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>参数测试页</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body {
-        font-family: sans-serif;
-        padding: 2em;
-        background: #f9f9f9;
-      }
-      h1 {
-        color: #333;
-      }
-      .param {
-        margin-bottom: 10px;
-        padding: 10px;
-        background: #fff;
-        border: 1px solid #ccc;
-      }
-      .param span {
-        font-weight: bold;
-        color: #0a0;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>📊 当前页面携带的归因参数</h1>
-    <div id="result"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>77Bet Download</title>
+  <meta property="og:title" content="77Bet - Get Your Bonus Now" />
+  <meta property="og:description" content="Claim your exclusive bonus and start winning!" />
+  <meta property="og:image" content="icon.png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #120000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .btn {
+      background: #ffc107;
+      border: none;
+      padding: 1em 2em;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background: #e0a800;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎁 Welcome to 77Bet</h1>
+  <p>Click the button below to claim your bonus and start playing.</p>
+  <button class="btn" onclick="startDownload()">Download Now</button>
 
-    <script>
-      const params = new URLSearchParams(location.search);
-      const keys = [
-        "utm_campaign",
-        "utm_ad",
-        "utm_content",
-        "fbclid",
-        "pixelid",
-        "bnp",
-      ];
-      const result = document.getElementById("result");
+  <script>
+    function getParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name) || '';
+    }
 
-      keys.forEach((key) => {
-        const val = params.get(key) || "(未提供)";
-        const el = document.createElement("div");
-        el.className = "param";
-        el.innerHTML = `<span>${key}:</span> ${val}`;
-        result.appendChild(el);
-      });
-    </script>
-  </body>
+    function startDownload() {
+      const campaign = getParam('utm_campaign');
+      const ad = getParam('utm_ad');
+      const content = getParam('utm_content');
+      const fbclid = getParam('fbclid');
+      const pixelid = getParam('pixelid') || '947256216730831'; // 默认 Pixel ID
+
+      // 拼接 APK 下载链接，带上参数
+      const downloadUrl = `https://res.77in.me/77.Bet.apk?pid=facebook&campaign=${encodeURIComponent(campaign)}&af_sub1=${encodeURIComponent(ad)}&af_sub2=${encodeURIComponent(pixelid)}&af_sub3=${encodeURIComponent(content)}&fbclid=${encodeURIComponent(fbclid)}`;
+
+      // 动态加载 Facebook Pixel 脚本并触发事件
+      if (pixelid) {
+        !function(f,b,e,v,n,t,s){
+          if(f.fbq) return;
+          n=f.fbq=function(){n.callMethod ?
+          n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
+          if(!f._fbq) f._fbq=n;
+          n.push=n;
+          n.loaded=!0;
+          n.version='2.0';
+          n.queue=[];
+          t=b.createElement(e);
+          t.async=!0;
+          t.src=v;
+          s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)
+        }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', pixelid);
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+      }
+
+      // 延时跳转，保证 Pixel 事件能发送出去
+      setTimeout(() => {
+        window.location.href = downloadUrl;
+      }, 300);
+    }
+  </script>
+</body>
 </html>
