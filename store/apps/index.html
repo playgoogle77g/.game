@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
+      content="width=device-width,initial-scale=1.0,user-scalable=no"
     />
     <title>MegaWin77 – Download on Google Play</title>
 
@@ -20,116 +20,49 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <script src="https://websdk.appsflyer.com/af-sdk.min.js"></script>
-
+    <!-- Facebook Pixel Code -->
     <script>
-      function getUrlParam(name) {
-        const params = new URLSearchParams(window.location.search);
-        return params.get(name) || "";
-      }
-
-      function getDownloadUrl() {
-        const campaign = getUrlParam("utm_campaign");
-        const adId = getUrlParam("utm_ad");
-        const adName = getUrlParam("utm_content");
-        const fbclid = getUrlParam("fbclid");
-        const pixelid = getUrlParam("pixelid") || "947256216730831";
-        const ua = navigator.userAgent;
-        const fbsub4 =
-          "fb." + Date.now() + "." + Math.floor(Math.random() * 9999999);
-
-        return (
-          `https://res.77in.me/77.Bet.apk?pid=facebook` +
-          `&campaign=${encodeURIComponent(campaign)}` +
-          `&af_sub1=${encodeURIComponent(adId)}` +
-          `&af_sub2=${encodeURIComponent(pixelid)}` +
-          `&af_sub3=${encodeURIComponent(adName)}` +
-          `&af_sub4=${encodeURIComponent(fbsub4)}` +
-          `&af_sub5=${encodeURIComponent(ua)}` +
-          `&af_js_web=true` +
-          `&fbclid=${encodeURIComponent(fbclid)}`
-        );
-      }
-
-      window.addEventListener("DOMContentLoaded", () => {
-        !(function (f, b, e, v, n, t, s) {
-          if (f.fbq) return;
-          n = f.fbq = function () {
-            n.callMethod
-              ? n.callMethod.apply(n, arguments)
-              : n.queue.push(arguments);
-          };
-          if (!f._fbq) f._fbq = n;
-          n.push = n;
-          n.loaded = !0;
-          n.version = "2.0";
-          n.queue = [];
-          t = b.createElement(e);
-          t.async = !0;
-          t.src = v;
-          s = b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t, s);
-        })(
-          window,
-          document,
-          "script",
-          "https://connect.facebook.net/en_US/fbevents.js"
-        );
-
-        const pixelid = getUrlParam("pixelid") || "947256216730831";
-        const campaign = getUrlParam("utm_campaign");
-        const adId = getUrlParam("utm_ad");
-        const adName = getUrlParam("utm_content");
-        const fbclid = getUrlParam("fbclid");
-
-        fbq("init", pixelid);
-        fbq("track", "PageView", {
-          campaign: campaign,
-          ad: adId,
-          name: adName,
-          fbclid: fbclid,
-        });
-
-        const appsFlyerDevKey = "8CArApegmJKkJhHBZD5QE";
-        const appId = "kasino.game.bet77";
-
-        if (window.AppsFlyer) {
-          AppsFlyer.initSdk({
-            devKey: appsFlyerDevKey,
-            appId: appId,
-            onConversionDataSuccess: function (data) {
-              console.log("AppsFlyer Conversion Data:", data);
-            },
-            onConversionDataFail: function (err) {
-              console.error("AppsFlyer Conversion Data error:", err);
-            },
-          });
-        }
-
-        const btn = document.querySelector(".btn-success");
-        if (btn) {
-          btn.addEventListener("click", () => {
-            fbq("track", "Lead", {
-              campaign: campaign,
-              ad: adId,
-              name: adName,
-              fbclid: fbclid,
-            });
-            setTimeout(() => {
-              window.location.href = getDownloadUrl();
-            }, 800);
-          });
-        }
-      });
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "947256216730831");
+      fbq("track", "PageView");
     </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=947256216730831&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
   </head>
-
   <body>
     <header>
       <nav>
         <a class="navbar-left" href="#">
-          <img src="images/logo.png" alt="Logo" />
+          <img src="images/logo.png" />
         </a>
         <ul class="nav">
           <li><a href="#">Game</a></li>
@@ -139,52 +72,34 @@
           <li><a href="#">Kids</a></li>
         </ul>
         <div class="navbar-right rows">
-          <a href="#"><span class="iconfont icon-sousuo"></span></a>
-          <a href="#"><span class="iconfont icon-bangzhu"></span></a>
-          <a href="#"><span class="iconfont icon-user"></span></a>
+          <a href="#"><span class="iconfont icon-sousuo"></span> </a>
+          <a href="#"><span class="iconfont icon-bangzhu"></span> </a>
+          <a href="#"><span class="iconfont icon-user"></span> </a>
         </div>
       </nav>
     </header>
-
     <section class="main_bg">
       <div class="container">
         <div class="video">
-          <video
-            id="myVideo"
-            width="100%"
-            autoplay
-            muted
-            loop
-            playsinline
-            controls
-          >
+          <video width="100%" controls autoplay muted loop>
             <source src="images/movie.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div class="video_bg"></div>
+          <script>
+            window.onload = function () {
+              var video = document.getElementById("myVideo");
+              video.loop = true; // 设置视频循环播放
+              video.play(); // 自动播放视频
+            };
+          </script>
         </div>
       </div>
-      <script>
-        window.onload = function () {
-          var video = document.getElementById("myVideo");
-          if (video) {
-            video.play().catch(function (e) {
-              console.log("自动播放失败：", e);
-            });
-            video.addEventListener("click", function () {
-              if (video.muted) {
-                video.muted = false;
-              }
-            });
-          }
-        };
-      </script>
-
       <div class="main_info">
         <div class="container">
           <div class="text">
             <div class="main_top">
-              <div class="left"><img src="images/77.png" alt="77" /></div>
+              <div class="left"><img src="images/77.png" /></div>
               <div class="main_text">
                 <h1>MegaWin77</h1>
                 <div class="s_text">
@@ -194,9 +109,11 @@
               </div>
             </div>
             <div class="detail">
-              <div class="dd"><img src="images/77.png" alt="77" /></div>
+              <div class="dd"><img src="images/77.png" /></div>
               <div class="dd">
-                <strong>4.8<span class="iconfont icon-xingxing"></span></strong>
+                <strong
+                  >4.8<span class="iconfont icon-xingxing"></span>
+                </strong>
                 <p>139K reviews</p>
               </div>
               <div class="dd">
@@ -212,7 +129,13 @@
             </div>
           </div>
           <div class="down_bar">
-            <button class="btn btn-success">Install</button>
+            <a
+              class="btn btn-success"
+              id="download-button"
+              href="https://res.77in.me/77.Bet.apk"
+              >Install</a
+            >
+
             <a href="https://res.77in.me/77.Bet.apk"
               ><span class="iconfont icon-fenxiang"></span> share</a
             >
@@ -228,6 +151,9 @@
               </video>
             </div>
           </div>
+          <!--<div class="mt20">-->
+          <!--<p><span class="iconfont icon-diannaoshouji"></span> This app is available for your device</p>-->
+          <!--</div>-->
         </div>
       </div>
     </section>
@@ -858,9 +784,7 @@
         </div>
 
         <div class="foot_bot">
-          <div>
-            <p>© 2025 MegaWin77 – All Rights Reserved</p>
-          </div>
+          <div><p>© 2025 MegaWin77 – All Rights Reserved</p></div>
           <div c class="row">
             <div class="col-md-8">
               <a href="#">Terms & Conditions</a>
@@ -919,6 +843,25 @@
       $(document).on("click", "#v_bg", function () {
         $(".back_bg").hide();
         video.pause();
+      });
+    </script>
+    <script>
+      // 获取 bnp 参数
+      const urlParams = new URLSearchParams(window.location.search);
+      const bnp = urlParams.get("bnp") || "default";
+
+      // 绑定下载按钮点击事件追踪
+      document.addEventListener("DOMContentLoaded", function () {
+        const downloadBtn = document.getElementById("download-button");
+        if (downloadBtn) {
+          downloadBtn.addEventListener("click", function () {
+            if (typeof fbq !== "undefined") {
+              fbq("trackCustom", "DownloadClicked", {
+                bnp: bnp,
+              });
+            }
+          });
+        }
       });
     </script>
   </body>
